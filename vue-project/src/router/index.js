@@ -49,6 +49,13 @@ const router = createRouter({
             meta:{
                 isAuth:true
             }
+        },
+        {
+            path:'/detail/:id',
+            component:()=>import("@/views/detail/detail.vue"),
+            meta:{
+                isAuth:true
+            }
         }
 
     ]

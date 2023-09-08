@@ -58,7 +58,7 @@ export default router
 
     export default pinia
 ```
-### 创建代码片段
+### 创建片段
 ```js
     // city.js
     import { defineStore } from "pinia";
@@ -90,6 +90,7 @@ export default router
     <img src="@/assets/.../.png" alt="" />
 ```
 ### 动态引入
+
 > 通过模板语法配合js使用
 > vue不在支持require()方式引入
 而是通过 new URL() 方法来引入图片

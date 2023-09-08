@@ -1,5 +1,5 @@
 <template>
-    <div class="houseList">
+    <div class="houseList" @click="itemClick">
         <div class="item-inner">
             <div class="cover">
                 <img 
@@ -23,12 +23,20 @@
 </template>
 
 <script setup>
-defineProps({
+import { useRouter } from 'vue-router';
+
+let props = defineProps({
     itemData:{
         type:Object,
         default:()=>[]
     }
-})
+});
+
+const router = useRouter()
+const itemClick = () => {
+    router.push('/detail/'+ props.itemData.houseId)
+}
+
 </script>
 
 <style lang="less" scoped>
